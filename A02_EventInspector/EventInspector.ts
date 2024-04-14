@@ -26,8 +26,8 @@ function handleMouseMove(event: MouseEvent) {
     if (rectangle) {
         const mouseX = event.clientX;
         const mouseY = event.clientY;
-        rectangle.style.left = mouseX + 'px'; // Setze die linke Position basierend auf der Maus-X-Position
-        rectangle.style.top = mouseY + 'px'; // Setze die obere Position basierend auf der Maus-Y-Position
+        rectangle.style.left = mouseX + 'px'; 
+        rectangle.style.top = mouseY + 'px'; 
         rectangle.innerText = `Mouse Position: (${mouseX}, ${mouseY}), Target Element: ${event.target.tagName}`;
     }
 }
@@ -41,11 +41,11 @@ function handleEvent(event: Event) {
 
 document.getElementById('customButton')?.addEventListener('click', () => {
     const customEvent = new CustomEvent('customEvent', {
-        bubbles: true, // Erlaubt das Aufsteigen des Events im DOM
-        cancelable: true, // Erlaubt das Abbrechen des Events
-        detail: { message: 'Custom event triggered!' } // Zusätzliche Daten für das Event
+        bubbles: true, 
+        cancelable: true, 
+        detail: { message: 'Custom event triggered!' } 
     });
-    document.dispatchEvent(customEvent); // Auslösen des benutzerdefinierten Events
+    document.dispatchEvent(customEvent); 
 });
 
 
