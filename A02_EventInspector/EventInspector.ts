@@ -7,7 +7,6 @@ Quellen:
 */
 
 
-// script.ts
 window.addEventListener('load', () => {
     document.addEventListener('mousemove', handleMouseMove);
     document.addEventListener('click', handleEvent);
