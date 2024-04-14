@@ -1,0 +1,60 @@
+body {
+    display: grid;
+    gap: 30px;
+    grid-template-columns: repeat(16, 1fr);
+    grid-template-rows: repeat(16, 1fr);
+    width: auto;
+    height: 100vh;
+    background-color: rgb(255, 255, 255);
+    overflow: hidden;
+    
+}
+
+
+
+#div1 {
+    grid-column: 2/8;
+    grid-row: 3/16;
+    width: 500px;
+    height: 500px;
+    border: 2px solid rgb(0, 0, 0);
+    margin: 10px;
+}
+#div0{
+    grid-column: 8/16;
+    grid-row: 3/16;
+    width: 500px;
+    height: 500px;
+    border: 2px solid rgb(0, 0, 0);
+    margin: 10px;
+}
+
+#rectangle {
+    width: 150px; /* Breite für die Anzeige der Mausposition und des Eventziels */
+    height: 50px; /* Höhe für die Anzeige der Mausposition und des Eventziels */
+    background-color: rgb(255, 255, 255); /* Hintergrundfarbe für die Anzeige */
+    position: fixed;
+    pointer-events: none; /* Damit das Rechteck keine Mausereignisse blockiert */
+    display: flex; /* Damit der Text im Rechteck zentriert wird */
+    justify-content: center; /* Horizontal zentrieren */
+    align-items: center; /* Vertikal zentrieren */
+    font-family: Arial, sans-serif; /* Schriftart für die Anzeige */
+    font-size: 14px; /* Schriftgröße für die Anzeige */
+    color: black; /* Textfarbe für die Anzeige */
+    border: 2px solid rgb(0, 0, 0);
+}
+
+header {
+    grid-column: 2/16;
+    grid-row: 2/2;
+    background-color: rgb(228, 228, 228);
+    color: rgb(15, 14, 14);
+    padding: 10px;
+}
+
+#customButton {
+    width: 50px;
+    height: 50px;
+    grid-column: 4/6;
+    grid-row: 7/9;
+}
