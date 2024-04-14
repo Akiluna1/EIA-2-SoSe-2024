@@ -6,7 +6,7 @@ Matrikel:275810
 Datum: 14.04.2024
 Quellen:
 */
-// script.ts
+
 window.addEventListener('load', () => {
     document.addEventListener('mousemove', handleMouseMove);
     document.addEventListener('click', handleEvent);
@@ -24,8 +24,8 @@ function handleMouseMove(event) {
     if (rectangle) {
         const mouseX = event.clientX;
         const mouseY = event.clientY;
-        rectangle.style.left = mouseX + 'px'; // Setze die linke Position basierend auf der Maus-X-Position
-        rectangle.style.top = mouseY + 'px'; // Setze die obere Position basierend auf der Maus-Y-Position
+        rectangle.style.left = mouseX + 'px'; 
+        rectangle.style.top = mouseY + 'px'; 
         rectangle.innerText = `Mouse Position: (${mouseX}, ${mouseY}), Target Element: ${event.target.tagName}`;
     }
 }
@@ -37,11 +37,11 @@ function handleEvent(event) {
 }
 document.getElementById('customButton')?.addEventListener('click', () => {
     const customEvent = new CustomEvent('customEvent', {
-        bubbles: true, // Erlaubt das Aufsteigen des Events im DOM
-        cancelable: true, // Erlaubt das Abbrechen des Events
-        detail: { message: 'Custom event triggered!' } // Zusätzliche Daten für das Event
+        bubbles: true, 
+        cancelable: true, 
+        detail: { message: 'Custom event triggered!' } 
     });
-    document.dispatchEvent(customEvent); // Auslösen des benutzerdefinierten Events
+    document.dispatchEvent(customEvent); 
 });
 document.addEventListener('customEvent', (event) => {
     console.log('Custom event triggered:', event.detail.message);
